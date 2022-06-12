@@ -31,15 +31,15 @@ def rand_switch_case(text, prob=_DEFAULT_PROB):
 	if prob < 0.0 or 1.0 < prob:
 		raise ValueError("The probability must range from 0.0 to 1.0.")
 
-	letters = list()
+	chars = list()
 
-	for charac in text:
+	for char in text:
 		if random() < prob:
-			letters.append(_switch_case(charac))
+			chars.append(_switch_case(char))
 		else:
-			letters.append(charac)
+			chars.append(char)
 	
-	return _EMPTY_STR.join(letters)
+	return _EMPTY_STR.join(chars)
 
 
 def _switch_case(c):
