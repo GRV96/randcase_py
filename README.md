@@ -28,7 +28,7 @@ python rand_case.py -h
 Exemple d'exécution:
 
 ```
-python rand_case.py -t "Les chemises de l'archiduchesse sont-elles sèches ou archisèches?" -p -0.7
+python rand_case.py -t "Les chemises de l'archiduchesse sont-elles sèches ou archisèches?" -p 0.7
 ```
 
 ## English
@@ -58,5 +58,5 @@ python rand_case.py -h
 Execution example:
 
 ```
-python rand_case.py -t "She sells seashells by the seashore." -p -0.7
+python rand_case.py -t "She sells seashells by the seashore." -p 0.7
 ```
