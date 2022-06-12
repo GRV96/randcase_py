@@ -18,7 +18,7 @@ def rand_switch_case(text, prob=_DEFAULT_PROB):
 	occurs with the given probability.
 
 	Args:
-		text (str): any string
+		text (str): the string that will undergo random case changes
 		prob (float): the probability that each letter in text have its case
 			changed. It must range from 0.0 to 1.0. Defaults to 0.5.
 
