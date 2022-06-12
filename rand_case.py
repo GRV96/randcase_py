@@ -18,7 +18,7 @@ def rand_switch_case(text, prob=_DEFAULT_PROB):
 	occurs with the given probability.
 
 	Args:
-		text (str): a string
+		text (str): any string
 		prob (float): the probability that each letter in text have its case
 			changed. It must range from 0.0 to 1.0. Defaults to 0.5.
 
@@ -61,11 +61,14 @@ if __name__ == "__main__":
 	arg_parser.add_argument("-p", "--probability",
 		type=float, default=_DEFAULT_PROB,
 		help="the probability that each letter in text have its case changed."
-			+ " It must range from 0.0 to 1.0.")
+			+ " It must range from 0.0 to 1.0. Defaults to 0.5.")
 
 	args = arg_parser.parse_args()
 	text = args.text
 	prob = args.probability
 
-	rand_case_text = rand_switch_case(text, prob)
-	print(rand_case_text)
+	try:
+		rand_case_text = rand_switch_case(text, prob)
+		print(rand_case_text)
+	except ValueError as ve:
+		print(f"ERROR! {ve}")
